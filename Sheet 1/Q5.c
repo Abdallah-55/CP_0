@@ -1,0 +1,1 @@
+// 5) Write a C program to check whether a number is a prime number or not, by using recursion.
