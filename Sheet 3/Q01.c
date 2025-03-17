@@ -20,6 +20,5 @@ void concat(char s1[], char s2[])
 {
     int l = strlen(s1);
     for (int i = 0; i <= strlen(s2); i++)
-
         s1[l + i] = s2[i];
 }
