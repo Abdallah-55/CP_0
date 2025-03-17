@@ -11,14 +11,10 @@ int IsSparse(int rows, int cols, int nums[][cols])
     {
         for (int j = 0; j < cols; j++)
         {
-            if (!nums[i][j])
-                count++;
+            count += !nums[i][j];
         }
     }
-    if (count > rows * cols / 2)
-        return 1;
-    else
-        return 0;
+    return count > rows * cols / 2;
 }
 
 int main()

@@ -23,19 +23,17 @@ int main()
     for (int i = 1; i < n; i++)
     {
         scanf("%d", &nums[i]);
-        if (nums[i] != nums[i - 1])
-        {
-            same = 0;
-        }
         if (nums[i] > nums[i - 1])
         {
+            same = 0;
             dec = 0;
         }
         if (nums[i] < nums[i - 1])
         {
+            same = 0;
             inc = 0;
         }
-        if (i == 1 && inc && !same)
+        if (inc && !same)
         {
             incinc = 1;
         }
@@ -43,12 +41,9 @@ int main()
         {
             incdec = 1;
         }
-        if (incdec)
+        if (incdec && nums[i] > nums[i - 1])
         {
-            if (nums[i] > nums[i - 1])
-            {
-                incdecdec = 0;
-            }
+            incdecdec = 0;
         }
     }
     if (same)

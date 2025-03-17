@@ -10,20 +10,15 @@
 
 int IsSymmetric(int n, int nums[][n])
 {
-    int symmetric = 1;
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
         printf("Enter the numbers for Row %d:\n", i + 1);
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < i; j++)
         {
             scanf("%d", &nums[i][j]);
-            if (i > j)
+            if (nums[i][j] != nums[j][i])
             {
-                if (nums[i][j] != nums[j][i])
-                {
-                    symmetric = 0;
-                    return 0;
-                }
+                return 0;
             }
         }
     }
