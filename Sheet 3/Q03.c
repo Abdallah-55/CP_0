@@ -9,7 +9,8 @@ int strcnt(char[], char);
 int main()
 {
     char s1[100];
-    gets(s1);
+    fgets(s1, sizeof(s1) + 1, stdin);
+    s1[strlen(s1) - 1] = 0;
     char c;
     c = getchar();
     int count = strcnt(s1, c);
@@ -19,9 +20,7 @@ strcnt(char s1[], char c)
 {
     int count = 0;
     for (int i = 0; i < strlen(s1); i++)
-    {
         if (s1[i] == c)
             count++;
-    }
     return count;
 }

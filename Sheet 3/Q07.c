@@ -35,7 +35,6 @@ int main()
         FRI,
         SAT
     };
-    printf("%d, %d, %d, %d, %d, %d\n", MON, TUE, WED, THU,
-           FRI, SAT);
+    printf("%d, %d, %d, %d, %d, %d\n", MON, TUE, WED, THU, FRI, SAT);
     return 0;
 }
