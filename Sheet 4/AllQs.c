@@ -38,9 +38,9 @@ int main()
     char *c = s;
     while (*c++ != '\0')
     {
-        if (*c == 'z')
+        if (*(c - 1) == 'z')
         {
-            printf("the position of z is %d", c - s + 1);
+            printf("the position of z is %d", c - s);
             return 0;
         }
     }
